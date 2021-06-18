@@ -48,9 +48,10 @@ jobs:
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'node-chat-app'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_67d826dba86a448c98eafecd16532696 }}
-        package: .
+      run: npm start
+#       uses: azure/webapps-deploy@v2
+#       with:
+#         app-name: 'node-chat-app'
+#         slot-name: 'production'
+#         publish-profile: ${{ secrets.AzureAppService_PublishProfile_67d826dba86a448c98eafecd16532696 }}
+#         package: .
