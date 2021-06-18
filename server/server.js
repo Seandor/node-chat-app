@@ -1,5 +1,3 @@
-require('./config/config');
-
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -8,7 +6,7 @@ const { generateMessage, generateLocationMessage } = require('./utils/message');
 const { isRealString } = require('./utils/validation');
 const { Users } = require('./utils/users');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../public')));
