@@ -45,9 +45,6 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: node-app
-        
-    - name: Npm start
-      run: npm start
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
